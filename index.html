@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ProSport Sporting Goods</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    
+    <body>
+       <!-- Collapesable navbar right -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand" href="#">ProSport</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">                        
+                        <li><a href="#">Mens Apparel</a></li>
+                        <li><a href="#">Womens Apparel</a></li> 
+                        <li><a href="#">Kids Apparel</a></li> 
+                    </ul>
+                </div>                       
+            </div>
+        </nav>
+    
+        <!-- Container for product quantity -->
+        <div class="container">
+            <h2 class="form-group header">Products:</h2>
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <form id="cart">
+                        <div class="form-group">                            
+                            <label for="txt-q-pants">Pants $30/pair:</label>                           
+                            <input type="number" class="form-control" id="pants" min="0" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="txt-q-shirt">Shirts $20/per shirt:</label>
+                            <input type="number" class="form-control" id="shirts" min="0" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="txt-q-sneak">Sneakers $50/pair:</label>
+                            <input type="number" class="form-control" id="sneakers" min="0" placeholder="0">
+                        </div>
+                    </form>
+                </div>           
+             </div>
+        </div>
+    
+        <!--Container for State selection and shipping method -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6" id="summary">
+                    <h2>Estimate Order:</h2>
+                    <div class="group state">
+                        <label for="s-state">State (required):</label>
+                        <select id="s-state">
+                            <option value="">- select -</option>
+                            <option value="">California (7.5% tax)</option>
+                            <option value="">New York</option>
+                            <option value="">Florida</option>
+                            <option value="">Pennsylvania</option>
+                            <option value="">Washington</option>
+                        </select>
+                    </div>                  
+
+                    <!-- Shipping method selection -->
+                    <div class="group method">
+                        <label for="r-method-pickup">Shipping and Handling: </label><br/>
+                        <input type="radio" value="pickup" name="r_method" id="r-method pickup" checked>
+                        <label for="r-method-usps">US Mail ($2/item)</label><br/>
+                        <input type="radio" value="ups" name="r_method" id="r-method-ups">
+                        <label for="r-method-ups">UPS ($3/item)</label><br/>                       
+                    </div>
+
+                    <!-- Text area where total will appear-->
+                    <div class="form-group">
+                        <label for="total">Total:</label>
+                        <input type="textarea" class="form-control" id="total">
+                    </div>                     
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- jquery cdn -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </body>
+</html>
